@@ -6,6 +6,7 @@ Bomberman::Bomberman(Texture* _textura, Tile* _tileActual) :GamePawn(_textura, _
 	tileActual = _tileActual;
 	tileSiguiente = nullptr;
 
+
 	if (tileActual != nullptr) {
 		tileActual->setBomberman(this);
 
