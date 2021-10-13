@@ -5,6 +5,6 @@ class SueloCesped :
 {
 public:
     SueloCesped(Texture* _textura, Tile* _tileActual);
-    virtual void setTileActual(Tile* _tileNuevo) {};
+    void setTileActual(Tile* _tileNuevo);
 };
 

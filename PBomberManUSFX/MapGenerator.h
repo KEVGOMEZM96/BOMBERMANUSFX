@@ -22,7 +22,7 @@ private:
 public:
 	// Constructores y destructores
 	MapGenerator();
-	MapGenerator(SDL_Renderer* _renderer, int _anchoPantalla, int _altoPantalla);
+	MapGenerator(SDL_Renderer* _renderer, int _anchoPantalla, int _altoPantalla, TilesGraph* _tilesGraph);
 
 	// Métodos accesores
 	int getAnchoPantalla() { return anchoPantalla; }
