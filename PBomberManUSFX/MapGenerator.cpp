@@ -24,10 +24,11 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	// Abrir el archivo
 	file.open(_path.c_str(), ios::in);
 
+
 	if (file.is_open() == false) {
 		std::cout << "No se pudo abrir el archivo de mapa" << std::endl;
 		return false;
-	}
+	};
 
 	string line;
 	
@@ -41,6 +42,9 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	texturaMuroCeramica = new Texture();
 	Texture* texturaSueloCesped;
 	texturaSueloCesped = new Texture();
+	Texture* texturaBomba;
+	texturaBomba = new Texture();
+
 	
 	Texture::renderer = renderer;
 
@@ -49,6 +53,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	texturaMuroCeramica->loadFromImage("resources/muro_ceramica.jpg");
 	texturaMuroMetal->loadFromImage("resources/muro_metal.jpg");
 	texturaSueloCesped->loadFromImage("resources/suelo_cesped.jpg");
+	texturaBomba->loadFromImage("resources/bomba.jpg");
 	
 	int x = 0;
 	int y = 0;
@@ -56,6 +61,8 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	int bombermanPosicionY = -1;
 	int bomberwomanPosicionX = -1;
 	int bomberwomanPosicionY = -1;
+	int bombaPosicionX = -1;
+	int bombaPosicionY = -1;
 
 	while (getline(file, line)) {
 		vector<char> chars(line.begin(), line.end());
@@ -77,6 +84,9 @@ bool MapGenerator::crearObjetosJuego(string _path)
 						bomberwomanPosicionX = x;
 						bomberwomanPosicionY = y;
 					}
+					if (x > bombaPosicionX || y > bombaPosicionY) {
+						bombaPosicionX = x;
+						bombaPosicionY = y;
 
 					break;
 				case '1':
@@ -123,16 +133,22 @@ bool MapGenerator::crearObjetosJuego(string _path)
 		((GamePawn*)objetoBomberwoman)->setBotomAbajo(SDLK_s);
 		((GamePawn*)objetoBomberwoman)->setBotomIzquierda(SDLK_a);
 		((GamePawn*)objetoBomberwoman)->setBotomDerecha(SDLK_d);
-
 		vectorObjectosJuego.push_back(objetoBomberwoman);
 	}
-
+	GameObject* objetoBomba = nullptr;
+	Tile* tileNuevo = tilesGraph->getTileEn(bombaPosicionX, bombaPosicionY);
+	objetoBomba = new Bomba(texturaBomba, tileNuevo);
+	if (objetoBomba != nullptr) {
+		((GameActor*)objetoBomba)->setPosicionX(bombaPosicionX * 34);
+		((GameActor*)objetoBomba)->setPosicionY(bombaPosicionY * 34);
+		vectorObjectosJuego.push_back(objetoBomba);
+	}
 
 	return false;
 }
 
-void MapGenerator::transferirObjetosJuego(vector<GameObject*>& _vectorObjetosJuegoDestino)
-{
+	void MapGenerator::transferirObjetosJuego(vector<GameObject*>&_vectorObjetosJuegoDestino)
+		 {
 	for (int i = 0; i < vectorObjectosJuego.size(); i++) {
 		_vectorObjetosJuegoDestino.push_back(vectorObjectosJuego[i]);
 	}

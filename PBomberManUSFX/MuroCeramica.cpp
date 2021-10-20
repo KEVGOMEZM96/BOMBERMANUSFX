@@ -38,3 +38,7 @@ void MuroCeramica::setTileActual(Tile* _tileNuevo)
 		posicionY = 0;
 	}
 }
+
+
+
+

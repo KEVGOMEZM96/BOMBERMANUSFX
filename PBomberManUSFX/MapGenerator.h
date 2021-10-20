@@ -8,6 +8,7 @@
 #include "MuroCeramica.h"
 #include "MuroMetal.h"
 #include "SueloCesped.h"
+#include "Bomba.h"
 #include "Tile.h"
 #include "TilesGraph.h"
 
