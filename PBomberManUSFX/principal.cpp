@@ -4,7 +4,8 @@
 //#include "GameObject.h"
 //#include "GameActor.h"
 //#include "Detonador.h"
-
+//#include "Bomba.h"
+//#include "Muroceramicaremovible.h"
 using namespace std;
 
 int main(int argc, char* args[])

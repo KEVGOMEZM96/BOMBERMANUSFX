@@ -8,7 +8,8 @@ Tile::Tile()
 	muroCeramica = nullptr;
 	muroMetal = nullptr;
 	sueloCesped = nullptr;
-	bomba = nulltpr;
+	bomba = nullptr;
+	muroceramicaremovible = nullptr;
 
 }
 
@@ -21,5 +22,5 @@ Tile::Tile(int _posicionTileX, int _posicionTileY)
 	muroMetal = nullptr;
 	sueloCesped = nullptr;
 	bomba = nullptr;
-	
+	muroceramicaremovible = nullptr;
 }

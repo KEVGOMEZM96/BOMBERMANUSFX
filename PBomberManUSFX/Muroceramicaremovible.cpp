@@ -1,11 +1,11 @@
-#include "MuroCeramica.h"
+#include "Muroceramicaremovible.h"
 
-MuroCeramica::MuroCeramica(Texture* _textura, Tile* _tileActual) :GameActor(_textura, _tileActual)
+Muroceramicaremovible::Muroceramicaremovible(Texture* _textura, Tile* _tileActual) :GameActor(_textura, _tileActual)
 {
 	tileActual = _tileActual;
 
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(this);
+		tileActual->setMuroceramicaremovible(this);
 
 		posicionX = tileActual->getPosicionTileX() * Tile::anchoTile;
 		posicionY = tileActual->getPosicionTileY() * Tile::altoTile;
@@ -19,16 +19,16 @@ MuroCeramica::MuroCeramica(Texture* _textura, Tile* _tileActual) :GameActor(_tex
 	}
 }
 
-void MuroCeramica::setTileActual(Tile* _tileNuevo)
+void Muroceramicaremovible::setTileActual(Tile* _tileNuevo)
 {
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(nullptr);
+		tileActual->setMuroceramicaremovible(nullptr);
 	}
 
 	tileActual = _tileNuevo;
 
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(this);
+		tileActual->setMuroceramicaremovible(this);
 
 		posicionX = tileActual->getPosicionTileX() * Tile::anchoTile;
 		posicionY = tileActual->getPosicionTileY() * Tile::altoTile;
@@ -38,3 +38,10 @@ void MuroCeramica::setTileActual(Tile* _tileNuevo)
 		posicionY = 0;
 	}
 }
+
+//visible = false;
+//tiempoVisible = 100;
+//tiempoInvisible = 150;
+//contadorTiempoVisible = 0;
+//contadorTiempoInvisible = 0;
+//int numeroMuroceramicaremovibleVisible = 0;

@@ -1,5 +1,6 @@
 #pragma once
 #include "GameActor.h"
+
 class MuroCeramica :
     public GameActor
 {

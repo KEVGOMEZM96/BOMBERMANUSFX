@@ -10,9 +10,10 @@
 #include "Bomberman.h"
 #include "MuroMetal.h"
 #include "MapGenerator.h"
-#include "Bomba.h"
 #include "system/KeyboardInput.h"
 #include "TilesGraph.h"
+#include "Bomba.h"
+#include "Muroceramicaremovible.h"
 
 using namespace std;
 

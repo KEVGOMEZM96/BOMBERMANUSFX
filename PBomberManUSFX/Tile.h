@@ -7,12 +7,14 @@
 //#include "MuroMetal.h"
 //#include "SueloCesped.h"
 //#include "Bomba.h"
+//#include "Muroceramicaremovible.h"
 
 class Bomberman;
 class MuroCeramica;
 class MuroMetal;
 class SueloCesped;
 class Bomba;
+class Muroceramicaremovible;
 
 class Tile
 {
@@ -22,6 +24,7 @@ private:
 	MuroMetal* muroMetal;
 	SueloCesped* sueloCesped;
 	Bomba* bomba;
+	Muroceramicaremovible* muroceramicaremovible;
 
 	int posicionTileX;
 	int posicionTileY;
@@ -40,6 +43,7 @@ public:
 	MuroMetal* getMuroMetal() { return muroMetal; }
 	SueloCesped* getSueloCesped() { return sueloCesped; }
 	Bomba* getBomba() { return bomba; }
+	Muroceramicaremovible* getMuroceramicaremovible() { return muroceramicaremovible; }
 	int getPosicionTileX() { return posicionTileX; }
 	int getPosicionTileY() { return posicionTileY; }
 
@@ -48,6 +52,7 @@ public:
 	void setMuroMetal(MuroMetal* _muroMetal) { muroMetal = _muroMetal; }
 	void setSueloCesped(SueloCesped* _sueloCesped) { sueloCesped = _sueloCesped; }
 	void setBomba(Bomba* _bomba) { bomba = _bomba; }
+	void setMuroceramicaremovible(Muroceramicaremovible* _muroceramicaremovible) { muroceramicaremovible = _muroceramicaremovible; }
 	void setPosicionTileX(int _posicionTileX) { posicionTileX = _posicionTileX; }
 	void setPosicionTileY(int _posicionTileY) { posicionTileY = _posicionTileY; }
 };

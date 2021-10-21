@@ -75,6 +75,9 @@
     <ClCompile Include="Bomba.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Muroceramicaremovible.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bomberman.h">
@@ -128,7 +131,13 @@
     <ClInclude Include="GamePawn.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Pila.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
     <ClInclude Include="Bomba.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Muroceramicaremovible.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

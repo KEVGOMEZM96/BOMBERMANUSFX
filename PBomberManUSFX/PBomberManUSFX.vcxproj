@@ -155,6 +155,7 @@
     <ClCompile Include="MapGenerator.cpp" />
     <ClCompile Include="Muro.cpp" />
     <ClCompile Include="MuroCeramica.cpp" />
+    <ClCompile Include="Muroceramicaremovible.cpp" />
     <ClCompile Include="MuroMetal.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="SueloCesped.cpp" />
@@ -176,7 +177,9 @@
     <ClInclude Include="MapGenerator.h" />
     <ClInclude Include="Muro.h" />
     <ClInclude Include="MuroCeramica.h" />
+    <ClInclude Include="Muroceramicaremovible.h" />
     <ClInclude Include="MuroMetal.h" />
+    <ClInclude Include="Pila.h" />
     <ClInclude Include="SueloCesped.h" />
     <ClInclude Include="system\KeyboardInput.h" />
     <ClInclude Include="Texture.h" />

@@ -14,7 +14,6 @@ protected:
     SDL_Keycode botonDerecha = SDLK_RIGHT;
     
 public:
-    //aa
     // Constructores destructor
     GamePawn();
     GamePawn(Texture* _textura, Tile* _tileActual);
