@@ -154,6 +154,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	if (objetoBomba != nullptr) {
 		((GameActor*)objetoBomba)->setPosicionX(bombaPosicionX * 34);
 		((GameActor*)objetoBomba)->setPosicionY(bombaPosicionY * 32);
+		//((GamePawn*)objetoBomba)->setBotomB(SDLK_b);
 		vectorObjectosJuego.push_back(objetoBomba);
 	}
 	GameObject* objetoMuroceramicaremovible = nullptr;
